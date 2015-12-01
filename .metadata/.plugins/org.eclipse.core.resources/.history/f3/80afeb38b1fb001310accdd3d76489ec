@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ibm.team.process.service.operationParticipants">
+      <operationParticipant
+            class="bury_approvals.OperationParticipant"
+            id="bury_approvals.operationParticipant"
+            name="name"
+            operationId="com.ibm.team.workitem.operation.workItemSave">
+      </operationParticipant>
+   </extension>
+
+</plugin>

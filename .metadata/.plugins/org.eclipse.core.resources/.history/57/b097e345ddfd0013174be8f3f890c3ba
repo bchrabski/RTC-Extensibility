@@ -1,0 +1,74 @@
+package bury_subscribers;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+
+import com.ibm.team.foundation.common.text.XMLString;
+import com.ibm.team.process.common.IProcessConfigurationElement;
+import com.ibm.team.process.common.advice.AdvisableOperation;
+import com.ibm.team.process.common.advice.runtime.IOperationParticipant;
+import com.ibm.team.process.common.advice.runtime.IParticipantInfoCollector;
+import com.ibm.team.repository.common.IAuditable;
+import com.ibm.team.repository.common.IContributorHandle;
+import com.ibm.team.repository.common.TeamRepositoryException;
+import com.ibm.team.repository.common.service.IContributorService;
+import com.ibm.team.repository.service.AbstractService;
+import com.ibm.team.workitem.common.ISaveParameter;
+import com.ibm.team.workitem.common.model.IApproval;
+import com.ibm.team.workitem.common.model.IWorkItem;
+import com.ibm.team.workitem.service.IWorkItemServer;
+
+public class OperationParticipant extends AbstractService implements
+		IOperationParticipant {
+
+	 private static final String Recursion = "Approvalsbypass";   // can be anything u want must be unique 
+	 private static Set<String> bypass =  new HashSet<String>(new ArrayList<String>(Arrays.asList(Recursion))); 
+	 
+	 String people = ["",""]
+	
+	@Override
+	public void run(AdvisableOperation operation,
+			IProcessConfigurationElement participantConfig,
+			IParticipantInfoCollector collector, IProgressMonitor monitor)
+			throws TeamRepositoryException {
+
+		Object data = operation.getOperationData();
+		if (data instanceof ISaveParameter)
+		{
+			ISaveParameter save = (ISaveParameter)data;
+			IAuditable audi = save.getNewState();
+			if(audi instanceof IWorkItem)
+			{
+				 if ((save.getAdditionalSaveParameters() == null)||(save.getAdditionalSaveParameters() != null) && (!save.getAdditionalSaveParameters().contains(this.Recursion))) 
+				 {        
+	            
+	                
+	             
+				IWorkItem wi = (IWorkItem)audi;
+				IWorkItemServer serverWI = getService(com.ibm.team.workitem.service.IWorkItemServer.class);
+				
+				IContributorService serverUser = getService(com.ibm.team.repository.common.service.IContributorService.class);
+				IWorkItem itemCopy=(IWorkItem)serverWI.findWorkItemById(wi.getId(), IWorkItem.FULL_PROFILE, null).getWorkingCopy(); 
+				
+				//dodatnie tego przerwania
+				
+				IContributorHandle  user = serverUser.fetchContributorByUserId("bchrabski");
+				
+				if (user!=null)
+				{
+					if(!itemCopy.getSubscriptions().contains(user))
+					{
+						itemCopy.getSubscriptions().add(user);
+					}
+				}			
+				serverWI.saveWorkItem3(itemCopy, null, null, bypass);   
+				}
+			}
+		
+		}
+	}
+}

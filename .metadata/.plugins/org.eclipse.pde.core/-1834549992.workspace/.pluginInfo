@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="1300" localization="OSGI-INF/l10n/bundle" name="Bury_approvals" project="bury_approvals"/>
+	<bundle bundleID="1304" localization="OSGI-INF/l10n/bundle" name="W" project="w"/>
+	<bundle bundleID="1301" localization="OSGI-INF/l10n/bundle" name="Sample_app" project="sample_app"/>
+	<bundle bundleID="1303" class="d.Activator" localization="OSGI-INF/l10n/bundle" name="D" project="d"/>
+	<bundle bundleID="1302" localization="OSGI-INF/l10n/bundle" name="Bury_subscribers" project="bury_subscribers"/>
+</map>

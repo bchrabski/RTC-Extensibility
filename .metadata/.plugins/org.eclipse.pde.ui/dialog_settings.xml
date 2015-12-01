@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="generateActivator"/>
+	<item value="false" key="rcpPlugin"/>
+	<item value="false" key="osgiProject"/>
+	<item value="false" key="initLaunch"/>
+	<item value="false" key="apiAnalysis"/>
+	<item value="true" key="uiPlugin"/>
+	<item value="3.4" key="targetName"/>
+	<section name="editBundleContainerWizard">
+		<item value="C:\SDK" key="location1"/>
+	</section>
+	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="98" key="DIALOG_Y_ORIGIN"/>
+			<item value="793" key="DIALOG_X_ORIGIN"/>
+			<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="600" key="DIALOG_WIDTH"/>
+		</section>
+	</section>
+	<section name="JavaAttributeWizard">
+	</section>
+	<section name="pluginsView">
+	</section>
+	<section name="pde-form-editor">
+		<item value="overview" key="org.eclipse.pde.ui.manifestEditor"/>
+	</section>
+</section>

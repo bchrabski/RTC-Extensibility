@@ -1,0 +1,42 @@
+package bury_approvals;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+
+import com.ibm.team.process.common.IProcessConfigurationElement;
+import com.ibm.team.process.common.advice.AdvisableOperation;
+import com.ibm.team.process.common.advice.IProcessReport;
+import com.ibm.team.process.common.advice.IReportInfo;
+import com.ibm.team.process.common.advice.runtime.IOperationParticipant;
+import com.ibm.team.process.common.advice.runtime.IParticipantInfoCollector;
+import com.ibm.team.repository.common.IAuditable;
+import com.ibm.team.repository.common.TeamRepositoryException;
+import com.ibm.team.repository.service.AbstractService;
+import com.ibm.team.workitem.common.ISaveParameter;
+import com.ibm.team.workitem.common.model.IWorkItem;
+
+public class OperationParticipant extends AbstractService implements
+		IOperationParticipant {
+
+	@Override
+	public void run(AdvisableOperation operation,
+			IProcessConfigurationElement participantConfig,
+			IParticipantInfoCollector collector, IProgressMonitor monitor)
+			throws TeamRepositoryException {
+		
+		Object data = operation.getOperationData();
+		if (data instanceof ISaveParameter)
+		{
+			ISaveParameter save = (ISaveParameter)data;
+			IAuditable audi = save.getNewState();
+			if(audi instanceof IWorkItem)
+			{
+				IReportInfo info = collector.createInfo("Jeden", "Dwa");
+				info.setSeverity(IProcessReport.ERROR);
+				collector.addInfo(info);
+			}
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.ibm.team.process.internal.ide.ui.wizards.ContributorSelectionPage">
+		<item value="false" key="teamContributorSelectionDialog.includeArchived"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode CONTRIB_DETAILLABEL=&quot;Email: bchrabski@gmail.com - ID: administrator&quot; CONTRIB_LABEL=&quot;Administrator Jazz&quot; CONTRIB_UUID=&quot;_aqlvMPe_EeOL5KOjG1yUSA&quot; REPOSITORY_URL=&quot;https://spserver:9443/ccm/&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="false" key="teamContributorSelectionDialog.openEditors"/>
+	</section>
+</section>

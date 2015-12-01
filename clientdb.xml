@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.magnolia.clientmodel:ClientModelRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.magnolia.clientmodel="http:///com/ibm/magnolia/clientmodel.ecore">
+  <workItemEditorHistory>
+    <internalContents date="2015-02-09T06:48:41.875-0800" description="155: dupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_uAbBsLBqEeSKF4RET2FvbQ"/>
+    </internalContents>
+    <internalContents date="2015-02-09T06:48:05.153-0800" description="154: test" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_pTv3MLBqEeSKF4RET2FvbQ"/>
+    </internalContents>
+    <internalContents date="2015-02-09T06:47:46.807-0800" description="153: test 2" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_le33YLBqEeSKF4RET2FvbQ"/>
+    </internalContents>
+    <internalContents date="2015-02-09T06:47:28.711-0800" description="152: test" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_ihVIMLBqEeSKF4RET2FvbQ"/>
+    </internalContents>
+    <internalContents date="2015-01-19T09:19:32.921-0800" description="151: a" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_UXqLoJ__EeSm-c1wQdKBgg"/>
+    </internalContents>
+    <internalContents date="2015-01-19T09:19:23.421-0800" description="149: asd" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_QkHBgJ__EeSm-c1wQdKBgg"/>
+    </internalContents>
+    <internalContents date="2015-01-19T09:11:07.873-0800" description="148: e" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_JsL84J_-EeSm-c1wQdKBgg"/>
+    </internalContents>
+    <internalContents date="2015-01-19T09:09:51.495-0800" description="147: test" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_7O9eUJ_9EeSm-c1wQdKBgg"/>
+    </internalContents>
+    <internalContents date="2015-01-19T09:01:22.221-0800" description="146: test" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_xoPRIJ_8EeSm-c1wQdKBgg"/>
+    </internalContents>
+    <internalContents date="2015-01-19T08:59:14.285-0800" description="145: test" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_ei9CUJ_8EeSm-c1wQdKBgg"/>
+    </internalContents>
+    <internalContents date="2015-01-19T08:58:01.776-0800" description="144: test" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_TzB78J_8EeSm-c1wQdKBgg"/>
+    </internalContents>
+    <internalContents date="2014-06-27T03:18:33.866-0700" description="43: dd" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_ToqKwP3kEeOQOuXyYej3Mg"/>
+    </internalContents>
+    <internalContents date="2014-06-27T02:24:46.564-0700" description="42: q" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_20XkMP3cEeOQOuXyYej3Mg"/>
+    </internalContents>
+    <internalContents date="2014-06-27T02:24:30.603-0700" description="41: q" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_1JvOYP3cEeOQOuXyYej3Mg"/>
+    </internalContents>
+    <internalContents date="2014-06-26T04:45:10.277-0700" description="38: qwe" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_qUUtoP0kEeOumrXts1RoFQ"/>
+    </internalContents>
+    <internalContents date="2014-06-26T04:20:18.880-0700" description="36: kjwerlkewrj" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_vwWG4P0jEeOumrXts1RoFQ"/>
+    </internalContents>
+    <internalContents date="2014-06-26T04:17:44.828-0700" description="35: &lt;untitled>" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_eUYmUP0jEeOumrXts1RoFQ"/>
+    </internalContents>
+    <internalContents date="2014-06-26T04:15:17.699-0700" description="34: s" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_IhbQUP0jEeOumrXts1RoFQ"/>
+    </internalContents>
+    <internalContents date="2014-06-26T04:02:12.653-0700" description="33: w" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_Q9qHsP0hEeOumrXts1RoFQ"/>
+    </internalContents>
+    <internalContents date="2014-06-26T03:52:07.042-0700" description="32: &lt;untitled>" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_3A1OwP0fEeOlxZoAHKfV4Q"/>
+    </internalContents>
+    <internalContents date="2014-06-26T03:47:04.266-0700" description="31: q" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_JYn64P0fEeOlxZoAHKfV4Q"/>
+    </internalContents>
+    <internalContents date="2014-06-26T03:26:22.763-0700" description="30: q" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_TRpV0P0cEeOgrLhrPqNjLw"/>
+    </internalContents>
+    <internalContents date="2014-06-26T03:17:29.986-0700" description="29: q" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_CJtZ8P0bEeO_FIzX94bruQ"/>
+    </internalContents>
+    <internalContents date="2014-06-26T03:06:11.478-0700" description="28: test" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_dGrBkP0ZEeOK1aHuDK6FPg"/>
+    </internalContents>
+    <internalContents date="2014-06-26T02:58:38.582-0700" description="27: q" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_arDwMP0YEeObNauDUP_xUQ"/>
+    </internalContents>
+    <internalContents date="2014-06-26T02:45:33.730-0700" description="26: q" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_mdJJEP0WEeOTpPlIeODYEg"/>
+    </internalContents>
+    <internalContents date="2014-06-26T02:37:13.197-0700" description="25: jeden" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_bdgBIP0VEeOiV65Qllz5xg"/>
+    </internalContents>
+    <internalContents date="2014-06-26T02:17:35.320-0700" description="24: d" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_s3TF4P0SEeOXR7zjkacdfA"/>
+    </internalContents>
+    <internalContents date="2014-06-26T02:16:48.801-0700" description="23: q" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_lWUAsP0SEeOXR7zjkacdfA"/>
+    </internalContents>
+    <internalContents date="2014-06-26T01:30:48.198-0700" description="22: Dziala rfq_rfc_task" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_F_IKIP0MEeOgDu04GJYSdg"/>
+    </internalContents>
+    <internalContents date="2014-06-26T01:20:51.719-0700" description="21: Dziala rfq_rfc_task" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_vqKIsP0KEeO0_75AM-VM1Q"/>
+    </internalContents>
+    <internalContents date="2014-06-26T01:00:31.523-0700" description="20: Dziala rfq_rfc_task" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_7Su1sP0HEeOs1-sATJY3gA"/>
+    </internalContents>
+    <internalContents date="2014-06-26T00:40:21.225-0700" description="19: Dziala rfq_rfc_task" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_EZ-1cP0FEeOxrLgraqvwvg"/>
+    </internalContents>
+    <internalContents date="2014-06-26T00:38:57.469-0700" description="18: Dziala rfq_rfc_task" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_60StkP0EEeOxrLgraqvwvg"/>
+    </internalContents>
+    <internalContents date="2014-06-26T00:38:48.093-0700" description="17: test" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_5QA3YP0EEeOxrLgraqvwvg"/>
+    </internalContents>
+    <internalContents date="2014-06-26T00:14:37.287-0700" description="16: Dzialarfq_rfc_task" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_haOOUP0BEeOmYrMgoI7lwQ"/>
+    </internalContents>
+    <internalContents date="2014-06-26T00:14:13.731-0700" description="15: Dzialatask" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_dom94P0BEeOmYrMgoI7lwQ"/>
+    </internalContents>
+    <internalContents date="2014-06-26T00:12:49.195-0700" description="14: Dzialatask" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_Qe2SUP0BEeOmYrMgoI7lwQ"/>
+    </internalContents>
+    <internalContents date="2014-06-25T23:58:10.812-0700" description="13: Test kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_OIdUoPz_EeOZj9Scd2uWxA"/>
+    </internalContents>
+    <internalContents date="2014-06-25T23:57:31.796-0700" description="12: Test kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_Hv7FQPz_EeOZj9Scd2uWxA"/>
+    </internalContents>
+    <internalContents date="2014-06-25T16:58:03.853-0700" description="11: Test kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_iP7bAPzEEeO6Jsxrp0h6og"/>
+    </internalContents>
+    <internalContents date="2014-06-25T16:57:30.859-0700" description="10: Test kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_ckCPMPzEEeO6Jsxrp0h6og"/>
+    </internalContents>
+    <internalContents date="2014-06-25T16:47:09.609-0700" description="9: Test kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_-oTQsPzCEeOeNqS0-ag-Qg"/>
+    </internalContents>
+    <internalContents date="2014-06-25T16:03:40.837-0700" description="8: Test kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_7oF2wPy8EeOgm-p-nlqpzg"/>
+    </internalContents>
+    <internalContents date="2014-06-25T15:34:07.723-0700" description="7: q" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_y8A0QPy4EeOB-ZSPiW8b5Q"/>
+    </internalContents>
+    <internalContents date="2014-06-25T15:20:45.447-0700" description="6: jeden kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_7qG3sPy2EeOLPMC6p8ITcg"/>
+    </internalContents>
+    <internalContents date="2014-06-25T15:04:23.239-0700" description="5: Test kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_pFbGcPy0EeOWaLJNeCCJ-A"/>
+    </internalContents>
+    <internalContents date="2014-06-25T04:47:39.613-0700" description="4: Test kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_fo9pIPxeEeOFJe_6RaqNWw"/>
+    </internalContents>
+    <internalContents date="2014-06-25T03:19:12.731-0700" description="3: Test kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_IZST8PxSEeOORKmvK0ptww"/>
+    </internalContents>
+    <internalContents date="2014-06-25T01:14:59.631-0700" description="2: Test kupa" repository="https://spserver:9443/ccm/">
+      <workItem itemId="_yOzegPxAEeOZxNWPwCB_eg"/>
+    </internalContents>
+  </workItemEditorHistory>
+  <queries/>
+  <queryViews/>
+</com.ibm.magnolia.clientmodel:ClientModelRoot>

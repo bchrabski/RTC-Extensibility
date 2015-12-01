@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkItem_RCP_UI.models:WorkItemRCPUIModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:WorkItem_RCP_UI.models="http:///WorkItem_RCP_UI/models.ecore" xmlns:process="com.ibm.team.process" xmlns:workitem="com.ibm.team.workitem">
+  <categoryHistory>
+    <internalContents repository="https://spserver:9443/ccm/">
+      <projectArea xsi:type="process:ProjectAreaHandle" itemId="_DCaS8PuvEeOUnOvB0JlavQ">
+        <stateId xsi:nil="true"/>
+      </projectArea>
+      <category xsi:type="workitem:CategoryHandle" itemId="_EbFWEPuvEeOMQdrZlXV5ig">
+        <stateId xsi:nil="true"/>
+      </category>
+    </internalContents>
+    <internalContents repository="https://spserver:9443/ccm/">
+      <projectArea xsi:type="process:ProjectAreaHandle" itemId="_UNsogPvWEeObPdiDOAmg6A">
+        <stateId xsi:nil="true"/>
+      </projectArea>
+      <category xsi:type="workitem:CategoryHandle" itemId="_X3KpkPvWEeObPdiDOAmg6A">
+        <stateId xsi:nil="true"/>
+      </category>
+    </internalContents>
+  </categoryHistory>
+</WorkItem_RCP_UI.models:WorkItemRCPUIModel>

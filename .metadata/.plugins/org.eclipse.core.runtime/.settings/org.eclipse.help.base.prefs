@@ -1,0 +1,10 @@
+#Tue Jun 24 07:36:02 PDT 2014
+remoteHelpICEnabled=true,false
+remoteHelpOn=true
+remoteHelpHost=www.ibm.com,127.0.0.1
+remoteHelpPath=/support/knowledgecenter/SSYMRC_5.0.0,/help
+remoteHelpName=Rational solution for Collaborative Lifecycle Management,Local
+remoteHelpPort=80,63650
+remoteHelpProtocol=http,http
+remoteHelpPreferred=true
+eclipse.preferences.version=1

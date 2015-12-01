@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ibm.team.process.service.operationAdvisors">
+      <operationAdvisor
+            class="sample_app.OperationAdvisor"
+            id="sample_app.operationAdvisor"
+            name="name"
+            operationId="com.ibm.team.workitem.operation.workItemSave">
+      </operationAdvisor>
+   </extension>
+
+</plugin>

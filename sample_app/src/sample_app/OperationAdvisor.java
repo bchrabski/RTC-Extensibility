@@ -1,0 +1,41 @@
+package sample_app;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+
+import com.ibm.team.process.common.IProcessConfigurationElement;
+import com.ibm.team.process.common.advice.AdvisableOperation;
+import com.ibm.team.process.common.advice.IAdvisorInfo;
+import com.ibm.team.process.common.advice.IAdvisorInfoCollector;
+import com.ibm.team.process.common.advice.runtime.IOperationAdvisor;
+import com.ibm.team.repository.common.IAuditable;
+import com.ibm.team.repository.common.TeamRepositoryException;
+import com.ibm.team.repository.service.AbstractService;
+import com.ibm.team.workitem.common.ISaveParameter;
+import com.ibm.team.workitem.common.model.IWorkItem;
+
+public class OperationAdvisor extends AbstractService implements
+		IOperationAdvisor {
+
+	@Override
+	public void run(AdvisableOperation operation,
+			IProcessConfigurationElement advisorConfiguration,
+			IAdvisorInfoCollector collector, IProgressMonitor monitor)
+			throws TeamRepositoryException {
+		Object data = operation.getOperationData();
+		
+		if (data instanceof ISaveParameter)
+		{
+			ISaveParameter save = (ISaveParameter)data;
+			IAuditable audi = save.getNewState();
+			
+			if(audi instanceof IWorkItem)
+			{
+				IWorkItem wi = (IWorkItem)audi;
+				IAdvisorInfo info = collector.createProblemInfo("Jeden", wi.getWorkItemType(), "error");
+				collector.addInfo(info);
+			}
+		}
+
+	}
+
+}

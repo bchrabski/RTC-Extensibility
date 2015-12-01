@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.ibm.team.repository.service.IRepositoryItemService"/>
+<fullyQualifiedTypeName name="com.ibm.team.repository.common.service.IContributorService"/>
+<fullyQualifiedTypeName name="com.ibm.team.repository.common.IContributor"/>
+<fullyQualifiedTypeName name="com.ibm.team.repository.common.IContributorHandle"/>
+<fullyQualifiedTypeName name="com.ibm.team.workitem.common.model.IApprovals"/>
+<fullyQualifiedTypeName name="com.ibm.team.workitem.common.model.WorkItemApprovals"/>
+<fullyQualifiedTypeName name="com.ibm.team.workitem.common.model.IApproval"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="TestList.UserCategory"/>
+<fullyQualifiedTypeName name="UserCategory"/>
+<fullyQualifiedTypeName name="bury_approvals.UserCategory"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="java.util.regex.Matcher"/>
+<fullyQualifiedTypeName name="com.ibm.team.process.common.IDescription"/>
+<fullyQualifiedTypeName name="com.ibm.team.workitem.common.model.IApprovalDescriptor"/>
+<fullyQualifiedTypeName name="com.ibm.team.foundation.common.text.XMLString"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+</qualifiedTypeNameHistroy>

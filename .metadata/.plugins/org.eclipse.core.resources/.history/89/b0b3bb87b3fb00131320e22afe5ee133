@@ -1,0 +1,24 @@
+package bury_approvals;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+
+import com.ibm.team.process.common.IProcessConfigurationElement;
+import com.ibm.team.process.common.advice.AdvisableOperation;
+import com.ibm.team.process.common.advice.runtime.IOperationParticipant;
+import com.ibm.team.process.common.advice.runtime.IParticipantInfoCollector;
+import com.ibm.team.repository.common.TeamRepositoryException;
+import com.ibm.team.repository.service.AbstractService;
+
+public class OperationParticipant extends AbstractService implements
+		IOperationParticipant {
+
+	@Override
+	public void run(AdvisableOperation operation,
+			IProcessConfigurationElement participantConfig,
+			IParticipantInfoCollector collector, IProgressMonitor monitor)
+			throws TeamRepositoryException {
+		
+
+	}
+
+}

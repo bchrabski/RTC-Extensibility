@@ -1,0 +1,161 @@
+package bury_approvals;
+
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+
+import com.ibm.team.foundation.common.text.XMLString;
+import com.ibm.team.process.common.IDescription;
+import com.ibm.team.process.common.IProcessConfigurationElement;
+import com.ibm.team.process.common.advice.AdvisableOperation;
+import com.ibm.team.process.common.advice.IProcessReport;
+import com.ibm.team.process.common.advice.IReportInfo;
+import com.ibm.team.process.common.advice.runtime.IOperationParticipant;
+import com.ibm.team.process.common.advice.runtime.IParticipantInfoCollector;
+import com.ibm.team.repository.common.IAuditable;
+import com.ibm.team.repository.common.IContributor;
+import com.ibm.team.repository.common.IContributorHandle;
+import com.ibm.team.repository.common.TeamRepositoryException;
+import com.ibm.team.repository.common.service.IContributorService;
+import com.ibm.team.repository.service.AbstractService;
+import com.ibm.team.repository.service.IRepositoryItemService;
+import com.ibm.team.workitem.common.ISaveParameter;
+import com.ibm.team.workitem.common.model.IApproval;
+import com.ibm.team.workitem.common.model.IApprovalDescriptor;
+import com.ibm.team.workitem.common.model.IApprovals;
+import com.ibm.team.workitem.common.model.IWorkItem;
+import com.ibm.team.workitem.common.model.WorkItemApprovals;
+import com.ibm.team.workitem.service.IWorkItemServer;
+
+class UserCategory {
+	public String userName;
+	public String categoryName;
+}
+
+public class OperationParticipant extends AbstractService implements
+		IOperationParticipant {
+
+	@Override
+	public void run(AdvisableOperation operation,
+			IProcessConfigurationElement participantConfig,
+			IParticipantInfoCollector collector, IProgressMonitor monitor)
+			throws TeamRepositoryException {
+		
+		Object data = operation.getOperationData();
+		if (data instanceof ISaveParameter)
+		{
+			ISaveParameter save = (ISaveParameter)data;
+			IAuditable audi = save.getNewState();
+			if(audi instanceof IWorkItem)
+			{
+				
+				IWorkItem wi = (IWorkItem)audi;
+				
+				
+				
+				if (wi.getWorkItemType().equals("rfq_rfc_task") && wi.getHTMLDescription().getPlainText().contains("<approval>")&& wi.getHTMLDescription().getPlainText().contains("</approval>"))
+				{
+					IWorkItemServer serverWI = getService(com.ibm.team.workitem.service.IWorkItemServer.class);
+					
+					IContributorService serverUser = getService(com.ibm.team.repository.common.service.IContributorService.class);
+					IWorkItem itemCopy=(IWorkItem)serverWI.findWorkItemById(wi.getId(), IWorkItem.FULL_PROFILE, null).getWorkingCopy(); 
+					
+					// pobranie danych
+					Pattern TAG_REGEX = Pattern.compile("&lt;approval&gt;(.+?)&lt;/approval&gt;");
+					
+					
+					List<String> strings = new ArrayList<String>();
+					List<UserCategory> users = new ArrayList<UserCategory>();
+					Set<String> categories = new HashSet<String>();
+					
+
+					String descriptionTXT = wi.getHTMLDescription().getXMLText();				
+					
+					final Matcher matcher = TAG_REGEX.matcher(descriptionTXT);
+					while (matcher.find()) {
+					       strings.add(matcher.group(1));
+					 }
+										
+					//Assety
+
+					for (String tmp : strings)
+					{
+						if (tmp.split("#").length>1)
+						{
+							UserCategory current = new UserCategory();
+							current.categoryName = tmp.split("#")[1];
+							current.userName = tmp.split("#")[0];
+							users.add(current);
+							
+							if (current.categoryName!=null)
+							{
+								categories.add(current.categoryName);
+							}
+						}
+					}
+
+						IApprovals approvals= itemCopy.getApprovals();
+						
+						for (UserCategory str : users)
+						{
+							IApprovalDescriptor descTmp = null;
+							
+							for (IApprovalDescriptor desc : approvals.getDescriptors())
+							{
+								if (desc.getName().equals(str.categoryName))
+								{
+									descTmp=desc;
+									break;
+								}
+							}	
+							
+							if (descTmp==null)
+							{
+								descTmp = approvals.createDescriptor(WorkItemApprovals.APPROVAL_TYPE.getIdentifier(), str.categoryName);
+							}
+							
+							
+							IContributorHandle  user = serverUser.fetchContributorByUserId(str.userName);
+						
+							if (user != null)
+							{
+								
+								IApproval approval= approvals.createApproval(descTmp, user);
+								approvals.add(approval);
+							}
+						}
+					
+					//save
+						
+					
+					String pattern = "(&lt;approval&gt;)(.+?)(&lt;/approval&gt;)";
+					String updated = descriptionTXT.replaceAll(pattern, "");
+					
+					itemCopy.setHTMLDescription(XMLString.createFromXMLText(updated));
+					
+
+					IApprovalDescriptor descTmp = null;
+						
+					for (IApprovalDescriptor desc : approvals.getDescriptors())
+					{	
+						if(wi.getDueDate()!=null)
+						{
+							desc.setDueDate(wi.getDueDate());
+						}
+					}	
+					serverWI.saveWorkItem2(itemCopy, null, null);
+				}
+			}
+		}
+		
+
+	}
+
+}
